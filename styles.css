@@ -1,0 +1,272 @@
+* {
+    /* Remove default margin and change box-sizing rules for all elements */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Set core root defaults */
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+}
+
+/* <a> elements that don't have a class get default styles */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* Remove all animations, transitions, and smooth scrolling for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+body {
+    font-family: system-ui;
+}
+
+/* ------------ */
+/*    Header    */
+/* ------------ */
+
+header {
+    background-color: #1F2937;
+    padding-block: 1rem;
+    padding-inline: 10rem;
+}
+
+header nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+
+    font-size: 1.5rem;
+    color: #F9FAF8;
+}
+
+.header p {
+    font-weight: 500;
+}
+
+.header-nav-links a {
+    text-decoration: none;
+    color: #E5E7EB;
+    font-size: 1.125rem;
+    font-weight: 300;
+    padding-inline: 5px;
+}
+
+.hero-container {
+    display: flex;
+    flex-direction: row;
+    padding-block: 3rem;
+    gap: 1rem;
+}
+
+.hero-text {
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.hero-text h1 {
+    font-size: 3rem;
+    font-weight: 900;
+    color: #F9FAF8;
+    line-height: 1.2;
+}
+
+.hero-text p {
+    color: #E5E7EB;
+    font-size: 1.125rem;
+    font-weight: 300;
+}
+
+.hero-text button {
+    display: inline-block;
+    background-color: #3882F6;
+    color: #F9FAF8;
+    border: none;
+    border-radius: 7px;
+    padding: 0.5rem 1.5rem;
+}
+
+.hero-img {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-img img {
+    width: 60rem;
+}
+
+.hero-img p {
+    color: #E5E7EB;
+    font-size: 1rem;
+    font-weight: 100;
+}
+
+/* ------------ */
+/* Main Content */
+/* ------------ */
+
+.main-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding-block: 3rem;
+    padding-inline: 10rem;
+}
+
+.main-section h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #1F2937;
+    text-align: center;
+}
+
+.cards-container {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+}
+
+.card-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+}
+
+.card-item h3 {
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: #1F2937;
+}
+
+.card-item img {
+    height: 9rem;
+    aspect-ratio: 4 / 3;
+    border: solid 3px #3882F6;
+    border-radius: 5px;
+}
+
+.card-item p {
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+.main-section-quoteblock {
+    background-color: #E5E7EB;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-block: 3rem;
+    padding-inline: 10rem;
+    gap: 0.2rem;
+    color: #1F2937
+}
+
+.main-section-quoteblock .quote {
+    font-size: 2.25rem;
+    font-weight: 300;
+    font-style: italic;
+}
+
+.main-section-quoteblock .author {
+    text-align: right;
+    width: 100%;
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+.main-section-call-to-action {
+    padding: 3rem 10rem;
+}
+
+.call-to-action-container {
+    background-color: #3882F6;
+    padding: 2rem 3rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 3.5rem;
+    border-radius: 10px;
+    max-width: 50rem;
+    margin-inline: auto;
+}
+
+.call-to-action-container .left p{
+    color: #F9FAF8;
+}
+
+.call-to-action-container .right button {
+    color: #F9FAF8;
+    font-size: 1rem;
+    font-weight: 500;
+    border: solid 2px #F9FAF8;
+    border-radius: 5px;
+    background-color: #3882F6;
+    padding: 0.5rem;
+    cursor: pointer;
+}
+
+/* ------------ */
+/*    Footer    */
+/* ------------ */
+
+footer {
+    background-color: #1F2937;
+    color: #E5E7EB;
+    font-size: 1rem;
+    font-weight: 300;
+    padding: 2rem 10rem;
+    text-align: center;
+}
